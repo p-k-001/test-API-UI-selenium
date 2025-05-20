@@ -2,7 +2,7 @@
 <suite name="UI Tests">
     <test name="Login Tests">
         <classes>
-            <class name="com.example.tests.AddUserTest"/>
+            <class name="ui.AddUserTest"/>
         </classes>
     </test>
 </suite>

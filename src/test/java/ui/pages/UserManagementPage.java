@@ -1,17 +1,20 @@
-package com.example.tests.pages;
+package ui.pages;
 
-import com.example.tests.utils.WaitHelper;
+import org.openqa.selenium.support.ui.Select;
+import ui.pages.utils.WaitHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
 
 public class UserManagementPage {
-    private WebDriver driver;
-    private WaitHelper wait;
+    private final WebDriver driver;
+    private final WaitHelper wait;
 
     private final By nameInput = By.cssSelector("[data-testid='name-input']");
     private final By emailInput = By.cssSelector("[data-testid='email-input']");
+    private final By ageInput = By.cssSelector("[data-testid='age-input']");
+    private final By roleSelect = By.cssSelector("[data-testid='role-select']");
     private final By addUserButton = By.cssSelector("[data-testid='add-button']");
     private final By userItems = By.cssSelector("[data-testid='user-item']");
 
@@ -35,6 +38,17 @@ public class UserManagementPage {
 
     public UserManagementPage enterEmail(String email) {
         driver.findElement(emailInput).sendKeys(email);
+        return this;
+    }
+
+    public UserManagementPage enterAge(String age) {
+        driver.findElement(ageInput).sendKeys(age);
+        return this;
+    }
+
+    public UserManagementPage enterRole(String role) {
+        Select selectRole = new Select(driver.findElement(roleSelect));
+        selectRole.selectByValue(role);
         return this;
     }
 
