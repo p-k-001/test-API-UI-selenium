@@ -10,7 +10,7 @@ import ui.pages.utils.ApiUtils;
 
 public class AddUserTest extends BaseTest {
 
-    private final String apiBaseUri = "https://test-api-one-gamma.vercel.app/";
+    private final String apiBaseUri = "https://test-api-one-gamma.vercel.app";
 //    private final String apiBaseUri = "http://localhost:3000";
 
     @BeforeMethod

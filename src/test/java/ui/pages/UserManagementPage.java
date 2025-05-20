@@ -11,7 +11,7 @@ public class UserManagementPage {
     private final WebDriver driver;
     private final WaitHelper wait;
 
-    private final String baseUri = "https://test-api-ui-teal.vercel.app/";
+    private final String baseUri = "https://test-api-ui-teal.vercel.app";
 //    private final String baseUri = "http://localhost:5173";
 
     private final By nameInput = By.cssSelector("[data-testid='name-input']");
