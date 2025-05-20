@@ -11,6 +11,9 @@ public class UserManagementPage {
     private final WebDriver driver;
     private final WaitHelper wait;
 
+    private final String baseUri = "https://test-api-ui-teal.vercel.app/";
+//    private final String baseUri = "http://localhost:5173";
+
     private final By nameInput = By.cssSelector("[data-testid='name-input']");
     private final By emailInput = By.cssSelector("[data-testid='email-input']");
     private final By ageInput = By.cssSelector("[data-testid='age-input']");
@@ -27,7 +30,8 @@ public class UserManagementPage {
     }
 
     public UserManagementPage goToUserManagementPage() {
-        driver.get("https://test-api-ui-teal.vercel.app/");
+//        driver.get(baseUri);
+        driver.get(baseUri);
         return this;
     }
 

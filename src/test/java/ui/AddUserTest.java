@@ -10,13 +10,16 @@ import ui.pages.utils.ApiUtils;
 
 public class AddUserTest extends BaseTest {
 
+    private final String apiBaseUri = "https://test-api-one-gamma.vercel.app/";
+//    private final String apiBaseUri = "http://localhost:3000";
+
     @BeforeMethod
     public void setUpEnvironment() throws Exception {
-        ApiUtils.sendDeleteRequest("https://test-api-one-gamma.vercel.app/users");
+        ApiUtils.sendDeleteRequest(apiBaseUri + "/users");
     }
     @AfterMethod
     public void tearDownEnvironment() throws Exception {
-        ApiUtils.sendDeleteRequest("https://test-api-one-gamma.vercel.app/users");
+        ApiUtils.sendDeleteRequest(apiBaseUri + "/users");
     }
 
     @Test
